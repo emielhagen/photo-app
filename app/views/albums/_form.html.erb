@@ -1,0 +1,11 @@
+<div class="form-card">
+  <div class="form">
+    <%= simple_form_for @album  do |f| %>
+      <%= f.input :name, label: "How do you want to name your album?" %>
+      <%= f.button :submit, class: 'btn btn-success' %>
+    <% end %>
+    <div class="button-back">
+      <%= link_to 'Back', root_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="form-card">
+  <div class="form">
+    <%= simple_form_for([@album, @photo])  do |f| %>
+      <%= f.input :cam_type, label: "What camera type did you use" %>
+      <%= f.input :location, label: "Where was this picture taken" %>
+      <%= f.input :exposure, label: "What exposure setting did you use" %>
+      <%= f.input :iso_speed, label: "What iso speed did you use" %>
+      <%= f.input :foc_length, label: "What focal length did you use" %>
+      <%= f.file_field :image %>
+      <%= f.button :submit, class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>
+
+<div class="button-back">
+  <%= link_to 'Back', album_path(@album), class: 'btn btn-secondary' %>
+</div>

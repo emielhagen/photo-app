@@ -1,1 +1,54 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Photography web app
+Ruby version used is 2.6.5
+
+# The project
+First clone the project into your local machine.
+```
+git clone git@github.com:emielhagen/photo-app.git
+cd photo-app
+```
+
+Then, initialize the postgresql database and run migration file and seed file.
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
+
+If you do not have imagemagick installed on your machine, install it first. The gem minimagick is dependent on imagemagick. Minimagick lets you resize images easily, which is why it is included in the project.
+```
+brew install imagemagick
+```
+
+Another dependency is Bootstrap, make sure you have it installed. Bootstrap is used for the front-end in combination with the CSS grid. If Bootstrap is not yet installed, run:
+```
+yarn add bootstrap
+```
+
+Start a rails server
+```
+rails s
+```
+And you will be able to use the application [Photography app](http://localhost:3000/)
+
+# CSS
+I have structured the css primarily in components. This way it is easy to re-use and easy to find.
+
+# Tests
+
+To run the rspec tests execute following command in terminal.
+```
+bundle exec rspec
+```
+
+# Error handling
+I've added an ErrorHandler module:
+
+```
+lib/error
+```
+
+It is included it in the ApplicationController. Reason is to handle errors on a global level, and this way I just had to include it in the application controller. To load the module on App startup I've added it in config/application.rb.
+
+Rescue StandardError acts as a Fallback mechanism to handle any exception.
+

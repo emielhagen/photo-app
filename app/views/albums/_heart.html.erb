@@ -1,0 +1,10 @@
+<% if photo.favorite? %>
+  <%= link_to favorite_photo_path(photo), method: :delete, remote: true do %>
+    <i class="fas fa-heart heart-red"></i>
+  <% end %>
+<% else %>
+  <%= link_to photo_favorite_photos_path(photo), method: :post, remote: true do %>
+    <i class="far fa-heart heart-red"></i>
+  <% end %>
+<% end %>
+

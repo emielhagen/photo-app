@@ -1,0 +1,35 @@
+.button-add {
+  position: fixed;
+  left: 5px;
+  bottom: 5px;
+}
+
+.button-back {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+}
+
+.delete-item {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 999;
+  text-shadow: 1px 1px black;
+}
+
+.edit-item {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  z-index: 999;
+  text-shadow: 1px 1px black;
+}
+
+.heart-red {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: red;
+  opacity: 0.7;
+}

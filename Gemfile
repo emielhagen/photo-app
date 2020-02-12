@@ -15,6 +15,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -27,4 +28,6 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 4.0.0.beta'
+  gem 'shoulda', '~> 3.5'
 end

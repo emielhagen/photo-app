@@ -1,0 +1,6 @@
+function renderHeart(userHTML) {
+  const photo = document.querySelector("[data-photo-id='<%= @photo.id %>']");
+  photo.innerHTML = userHTML;
+}
+
+renderHeart('<%= j render "albums/heart", photo: @photo %>');

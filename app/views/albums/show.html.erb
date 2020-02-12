@@ -1,0 +1,45 @@
+<div class="banner">
+  <div class="dark-stroke">
+    <%= link_to root_path do %>
+      <i class="fas fa-home"></i>
+    <% end %>
+  </div>
+  <div class="light-stroke">
+    <div class="large-title">
+       Photos of <%=@album.name%>
+    </div>
+  </div>
+</div>
+
+<div class="cards-wrapper">
+  <div class="container">
+    <div class="cards">
+      <% if @album.photos.blank? %>
+        <div class="card">
+          <div class="no-content">
+            <p>No photos yet</p>
+          </div>
+        </div>
+      <% else %>
+        <% @album.photos.each do |photo| %>
+          <div class="card">
+            <%= link_to photo_path(photo), method: :delete do %>
+              <i class="fas fa-trash-alt delete-item"></i>
+            <% end %>
+            <%= link_to(image_tag(photo.image, class: 'image-card'), photo_path(photo)) if photo.image.attachment %>
+            <%= link_to edit_photo_path(photo) do %>
+              <i class="far fa-edit edit-item"></i>
+            <% end %>
+            <div data-photo-id="<%= photo.id %>">
+              <%= render 'heart', photo: photo %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="button-add">
+  <%= link_to 'Add photo', new_album_photo_path(@album), class: 'btn btn-secondary' %>
+</div>

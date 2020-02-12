@@ -1,0 +1,42 @@
+.banner {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-link {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.dark-stroke {
+  height: 25px;
+  background-color: #4bacb8;
+}
+
+.light-stroke {
+  min-height: 50px;
+  background-color: #80deea;
+}
+
+.large-title {
+  padding: 50px 0px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+#favorites {
+  font-family: 'roboto';
+  margin-left: 5px;
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.red {
+  color: red;
+}

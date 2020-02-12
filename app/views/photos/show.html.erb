@@ -1,0 +1,41 @@
+<div class="banner">
+  <div class="dark-stroke">
+    <%= link_to root_path do %>
+      <i class="fas fa-home"></i>
+    <% end %>
+    <div class="banner-link">
+      <%= link_to album_path(@photo.album) do %>
+        Back to album
+      <% end %>
+    </div>
+  </div>
+  <div class="light-stroke">
+    <div class="large-title">
+      Photo details
+    </div>
+  </div>
+</div>
+
+<div class="photos-show">
+  <div class="photos-show-card">
+    <div class="card-image">
+      <%= image_tag(@photo.image, class: 'image-card-large') if @photo.image.attachment %>
+      <div data-photo-id="<%= @photo.id %>">
+        <%= render 'albums/heart', photo: @photo %>
+      </div>
+      <%= link_to edit_photo_path(@photo) do %>
+        <i class="far fa-edit edit-item"></i>
+      <% end %>
+      <%= link_to photo_path(@photo), method: :delete do %>
+        <i class="fas fa-trash-alt delete-item"></i>
+      <% end %>
+    </div>
+    <div class="spec-list">
+      <ul><p><strong>Location: </strong><%= @photo.location&.capitalize %></p></ul>
+      <ul><p><strong>Camery type: </strong><%= @photo.cam_type&.capitalize %></p></ul>
+      <ul><p><strong>Exposure: </strong><%= @photo.exposure %></p></ul>
+      <ul><p><strong>Iso speed: </strong><%= @photo.iso_speed %></p></ul>
+      <ul><p><strong>Focal length: </strong><%= @photo.foc_length %></p></ul>
+    </div>
+  </div>
+</div>

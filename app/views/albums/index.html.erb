@@ -1,0 +1,42 @@
+<div class="banner">
+  <div class="dark-stroke">
+    <div class="banner-link">
+      <%= link_to favorite_photos_path do %>
+        <i class="fas fa-heart flex red"><p id="favorites">  Favorites</p></i>
+      <% end %>
+    </div>
+  </div>
+  <div class="light-stroke">
+    <div class="large-title">Photo albums</div>
+  </div>
+</div>
+
+<div class="cards-wrapper">
+  <div class="container">
+    <div class="cards">
+      <% @albums.each do |album| %>
+        <div class="card">
+          <div class="card-title"><h1><%= link_to album.name, album_path(album)%></h1></div>
+          <% if album.photos.first&.image&.attachment %>
+            <%= link_to(image_tag(album.photos.first&.image, class: 'image-card'), album_path(album)) %>
+          <% else %>
+            <%= link_to(image_tag('https://picsum.photos/250/200', class: 'image-card'), album_path(album)) %>
+          <% end %>
+          <%= link_to edit_album_path(album) do %>
+            <i class="far fa-edit edit-item"></i>
+          <% end %>
+          <%= link_to album_path(album), method: :delete do %>
+            <i class="fas fa-trash-alt delete-item"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="button-add">
+  <%= link_to 'New album', new_album_path, class: 'btn btn-secondary' %>
+</div>
+
+
+

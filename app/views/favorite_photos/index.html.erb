@@ -1,0 +1,30 @@
+<div class="banner">
+  <div class="dark-stroke">
+    <%= link_to root_path do %>
+      <i class="fas fa-home"></i>
+    <% end %>
+  </div>
+  <div class="light-stroke">
+    <div class="large-title">
+      Your favorites
+    </div>
+  </div>
+</div>
+
+<div class="cards-wrapper">
+  <div class="container">
+    <div class="cards">
+      <% @favorite_photos.each do |photo| %>
+        <div class="card">
+          <%= link_to(image_tag(photo.image, class: 'image-card'), photo_path(photo)) if photo.image.attachment %>
+          <%= link_to edit_photo_path(photo) do %>
+            <i class="far fa-edit edit-item"></i>
+          <% end %>
+          <div data-photo-id="<%= photo.id %>">
+            <i class="fas fa-heart heart-red"></i>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

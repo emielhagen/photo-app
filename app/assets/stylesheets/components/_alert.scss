@@ -4,3 +4,12 @@
   right: 16px;
   z-index: 1000;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
