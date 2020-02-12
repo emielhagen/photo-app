@@ -31,7 +31,7 @@ rails s
 ```
 And you will be able to use the application [Photo app](http://localhost:3000/)
 
-Only the homepage is excepted from logging in. All other pages require to create a user profile first. Once this is done, the app is accessible fully. Favoriting photos from any album will be user specific.
+Devise is added for users and only the homepage is excepted from logging in. All other pages require you to create a user profile first. Once this is done, the app is accessible fully. It is currently just set up so that multiple users can add and edit photo albums from themself and others. If required this could be restricted to self uploaded material. Favoriting photos from any album is already user specific.
 
 # CSS
 I have structured the css primarily in components. This way it is easy to re-use and easy to find.
