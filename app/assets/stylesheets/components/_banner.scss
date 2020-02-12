@@ -11,6 +11,7 @@
 }
 
 .dark-stroke {
+  position: relative;
   height: 25px;
   background-color: #4bacb8;
 }
@@ -30,13 +31,23 @@
 #favorites {
   font-family: 'roboto';
   margin-left: 5px;
-  color: white;
+  color: #B2B2B2;
+  margin-bottom: 0px;
 }
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .red {
   color: red;
+}
+
+.black {
+  color: black
+}
+
+.centered {
+  align-items: center;
 }

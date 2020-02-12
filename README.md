@@ -1,5 +1,5 @@
 # Photography web app
-Ruby version used is 2.6.5
+Ruby version used is 2.5.7
 
 # The project
 First clone the project into your local machine.
@@ -29,7 +29,7 @@ Start a rails server
 ```
 rails s
 ```
-And you will be able to use the application [Photography app](http://localhost:3000/)
+And you will be able to use the application [Photo app](http://localhost:3000/)
 
 # CSS
 I have structured the css primarily in components. This way it is easy to re-use and easy to find.

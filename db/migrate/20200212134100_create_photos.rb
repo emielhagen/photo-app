@@ -7,7 +7,6 @@ class CreatePhotos < ActiveRecord::Migration[6.0]
       t.string :exposure
       t.string :iso_speed
       t.string :foc_length
-      t.boolean :favorite, default: false
 
       t.timestamps
     end

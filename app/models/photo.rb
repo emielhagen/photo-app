@@ -3,4 +3,5 @@ class Photo < ApplicationRecord
 
   # validates :location, :cam_type, :exposure, :iso_speed, :foc_length, presence: true
   has_one_attached :image
+  has_many :favorite_photos
 end
