@@ -31,6 +31,8 @@ rails s
 ```
 And you will be able to use the application [Photo app](http://localhost:3000/)
 
+Only the homepage is excepted from logging in. All other pages require to create a user profile first. Once this is done, the app is accessible fully. Favoriting photos from any album will be user specific.
+
 # CSS
 I have structured the css primarily in components. This way it is easy to re-use and easy to find.
 
